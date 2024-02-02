@@ -1,0 +1,27 @@
+#  Local .terraform directories
+**/.terraform/*
+
+# terraform lock files
+.terraform.lock.hcl
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# secret tfvars
+secrets.auto.tfvars
+*secrets.tfvars
+
+# ignore compiled providers
+terraform-provider-*
+
+# ignore auto generated files
+*.generated.*
+
+# direnv
+.envrc
+.env
+
+# python
+**/.venv
+**/venv

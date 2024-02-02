@@ -1,0 +1,8 @@
+{
+  "module_name": "new-module",
+  "primary_provider": "azurerm",
+  "primary_provider_minimum_version": "3.0.0",
+  "short_description": "This module creates some new resources in your subscription.",
+  "module_maintainers": "BU-Azure",
+  "project_slug": "terraform-{{ cookiecutter.primary_provider.lower() }}-{{ cookiecutter.module_name.lower() }}"
+}

@@ -1,0 +1,32 @@
+---
+repos:
+  - repo: 'https://github.com/pre-commit/pre-commit-hooks'
+    rev: 'v4.4.0'
+    hooks:
+      - id: 'check-added-large-files'
+      - id: 'fix-byte-order-marker'
+      - id: 'check-case-conflict'
+      - id: 'check-json'
+        exclude: '\.vscode/'
+      - id: 'end-of-file-fixer'
+      - id: 'trailing-whitespace'
+      - id: 'mixed-line-ending'
+      - id: 'check-merge-conflict'
+
+  - repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.81.0
+    hooks:
+      - id: terraform_fmt
+        args:
+          - --args=-no-color
+          - --args=-diff
+          - --args=-write=false
+
+      - id: terraform_tflint
+        args:
+          - --args=--config=__GIT_WORKING_DIR__/.tflint.hcl
+        exclude: ^.*(examples|tests).*$
+
+      - id: terraform_docs
+        args:
+          - --args=--config=.terraform-docs.yml
