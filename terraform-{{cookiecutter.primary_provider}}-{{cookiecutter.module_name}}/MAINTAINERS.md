@@ -1,1 +1,1 @@
-This project is maintained by {{ cookiecutter.module_maintainers }}
+# This project is maintained by {{ cookiecutter.module_maintainers }}
