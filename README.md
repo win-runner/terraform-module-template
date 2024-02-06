@@ -1,8 +1,7 @@
 # `Terraform Module Standard` Template
 
 This `Cookiecutter` template implements our evoila good practices
-for Terraform modules and should be used to create new modules that are used
-in our private Terraform registry.
+for Terraform modules and should be used to create new modules that are used in our private Terraform registry.
 
 ## Guidelines and good practices
 
@@ -20,45 +19,11 @@ in our private Terraform registry.
 1. The provided `tflint` rules should not be changed (adding new ones is OK).
 1. The provided `pre-commit` hooks should be used.
 
-### Optional
+### Optional recommendations
 
-1. We recommend using the [Gitflow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow).
-2. We recommend using `Visual Studio Code`.
-
-### Must have for `Cloud Platform Deployment modules`
-
-If you plan to allow your Terrform module to be deployed as a `Cloud Platform
-Deployment`, you should also follow these guidelines in addition to the ones
-above:
-
-1. As we automatically transform Cloud Platform Deployment deployments & parameters
-   to Terraform module instances, you need to make sure your input parameter names
-   match the API parameter definition, example:
-
-This `Cloud Platform Deployment`
-
-```json
-{
-  "type": "sometype",
-  "data": {
-    "parameters": {
-      "name": "foo",
-      "someString": "bar",
-      "someList": ["baz"]
-    }
-  }
-}
-```
-
-will instantiate the following Terraform module:
-
-```terraform
-module "deployment_73b4f7aa-1018-4bcc-918f-e57a80ee840d" {
-  name       = "foo"
-  someString = "bar"
-  someList   = ["baz"]
-}
-```
+1. We recommend using the [Gitflow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) or [Trunk-based development](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development).
+2. We recommend the use of [Visual Studio Code](https://code.visualstudio.com), due to the extensions and the customizability.
+3. We recommend using [KICS](https://kics.io/index.html) and/or [Checkov](https://www.checkov.io) for static code analysis of Infrastructure as Code.
 
 ## Example modules built with this template
 
@@ -66,7 +31,7 @@ module "deployment_73b4f7aa-1018-4bcc-918f-e57a80ee840d" {
 
 ### Writing tests
 
-For the time being, we do not require tests.  
+Writing tests is not required, but can be done with `Terraform tests` in Terraform v1.6.0 and later.
 See https://developer.hashicorp.com/terraform/language/tests
 
 ## Create a new module with this template
@@ -82,5 +47,5 @@ cookiecutter \
   -o /path/to/your/new/module/root
 ```
 
-**Note** You can find additional documentation how to work with your newly created
+**Note:** You can find additional documentation how to work with your newly created
 module in the modules README.md file.

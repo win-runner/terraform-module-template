@@ -9,7 +9,7 @@
 
 ## Contribute
 
-Please make sure you follow the HashiCorp and evoila Best practices for creating
+Please make sure you follow the HashiCorp and evoila best practices for creating
 and maintaining Terraform modules.
 
 ### Prerequisites
@@ -29,7 +29,7 @@ All contributions should be added/reviewed using
 Please follow [Semantic Versioning](http://semver.org/) while versioning/tagging this module.
 
 **Important:** Never update/overwrite an existing version tag, this is against good
-practice and enforced in our private Terraform registry.
+practice.
 
 ### Update the documentation
 
