@@ -27,7 +27,7 @@ for Terraform modules and should be used to create new modules that are used in 
 
 ## Example modules built with this template
 
-- ...
+- [terraform-azurerm-blob-storage](https://dev.azure.com/jfriderici/terraform-template/_git/terraform-azurerm-blob-storage)
 
 ### Writing tests
 
