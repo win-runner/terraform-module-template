@@ -1,4 +1,4 @@
-# `Terraform Module Standard` Template
+# Terraform Module Template
 
 This `Cookiecutter` template implements our evoila good practices
 for Terraform modules and should be used to create new modules that are used in our private Terraform registry.
@@ -19,7 +19,7 @@ for Terraform modules and should be used to create new modules that are used in 
 1. The provided `tflint` rules should not be changed (adding new ones is OK).
 1. The provided `pre-commit` hooks should be used.
 
-### Optional recommendations
+### Optional
 
 1. We recommend using the [Gitflow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) or [Trunk-based development](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development).
 2. We recommend the use of [Visual Studio Code](https://code.visualstudio.com), due to the extensions and the customizability.
