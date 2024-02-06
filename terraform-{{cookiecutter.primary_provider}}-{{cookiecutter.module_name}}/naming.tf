@@ -1,4 +1,4 @@
-#// this generates a names for the azure resources using the following pattern:
+#// this generates names for the azure resources using the following pattern:
 #// [prefix]-[cafprefix]-[name]-[postfix]-[random_chars]
 # resource "azurecaf_name" "main" {
 #   name          = lower(var.name)
