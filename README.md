@@ -27,7 +27,7 @@ for Terraform modules and should be used to create new modules that are used in 
 
 ## Example modules built with this template
 
-- [terraform-azurerm-blob-storage](https://dev.azure.com/jfriderici/terraform-template/_git/terraform-azurerm-blob-storage)
+- [terraform-azurerm-blob-storage](https://dev.azure.com/evoila-bu-microsoft/Terraform-Modules/_git/terraform-azurerm-blob-storage)
 
 ### Writing tests
 
@@ -43,7 +43,7 @@ Please follow these steps to instantiate a new module:
 
 ```shell
 cookiecutter \
-  https://<Insert path to module template>/terraform-module-template \
+  https://evoila-bu-microsoft@dev.azure.com/evoila-bu-microsoft/Terraform-Modules/_git/terraform-module-template \
   -o /path/to/your/new/module/root
 ```
 
