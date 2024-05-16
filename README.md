@@ -1,7 +1,7 @@
 # Terraform Module Template
 
-This `Cookiecutter` template implements our evoila good practices
-for Terraform modules and should be used to create new modules that are used in our private Terraform registry.
+This `Cookiecutter` template provides a scaffold to implement good practices
+for Terraform modules and can be used to create new modules.
 
 ## Guidelines and good practices
 
@@ -27,12 +27,12 @@ for Terraform modules and should be used to create new modules that are used in 
 
 ## Example modules built with this template
 
-- [terraform-azurerm-blob-storage](https://dev.azure.com/evoila-bu-microsoft/Terraform-Modules/_git/terraform-azurerm-blob-storage)
+- ...
 
 ### Writing tests
 
 Writing tests is not required, but can be done with `Terraform tests` in Terraform v1.6.0 and later.
-See https://developer.hashicorp.com/terraform/language/tests
+See <https://developer.hashicorp.com/terraform/language/tests>
 
 ## Create a new module with this template
 
@@ -43,7 +43,7 @@ Please follow these steps to instantiate a new module:
 
 ```shell
 cookiecutter \
-  https://evoila-bu-microsoft@dev.azure.com/evoila-bu-microsoft/Terraform-Modules/_git/terraform-module-template \
+  https://github.com/win-runner/terraform-module-template/ \
   -o /path/to/your/new/module/root
 ```
 
