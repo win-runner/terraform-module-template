@@ -3,7 +3,43 @@
 
 variable "name" {
   type        = string
-  description = <<DESC
-This is an example input variable
-DESC
+  nullable    = false
+  description = <<EOT
+The Name which should be used for the Resources in Azure.
+Changing this forces a new Resource to be created.
+EOT
+
+  validation {
+    condition     = try(regex("[^a-z0-9-]", var.name), "") == ""
+    error_message = "Only alphanumerics in lower case are allowed."
+  }
+}
+
+variable "location" {
+  type        = string
+  nullable    = false
+  default     = "swedencentral"
+  description = <<EOT
+The location/region where the Storage Account should be created.
+Changing this forces a new Resource to be created.
+EOT
+  validation {
+    condition = alltrue([
+      contains(
+        [
+          "swedencentral",
+          "westeurope",
+          "northeurope",
+          "germanynorth",
+          "germanywestcentral"
+        ],
+        var.location
+      )
+      , var.location)
+    ])
+    error_message = <<ERR
+Possible values are `swedencentral`, `westeurope`,
+`northeurope`, `germanynorth`, `germanywestcentral`.
+ERR
+  }
 }
