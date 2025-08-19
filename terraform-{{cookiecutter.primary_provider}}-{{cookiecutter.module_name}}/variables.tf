@@ -24,19 +24,16 @@ The location/region where the Storage Account should be created.
 Changing this forces a new Resource to be created.
 EOT
   validation {
-    condition = alltrue([
-      contains(
-        [
-          "swedencentral",
-          "westeurope",
-          "northeurope",
-          "germanynorth",
-          "germanywestcentral"
-        ],
-        var.location
-      )
-      , var.location)
-    ])
+    condition = contains(
+      [
+        "swedencentral",
+        "westeurope",
+        "northeurope",
+        "germanynorth",
+        "germanywestcentral"
+      ],
+      var.location
+    )
     error_message = <<ERR
 Possible values are `swedencentral`, `westeurope`,
 `northeurope`, `germanynorth`, `germanywestcentral`.
